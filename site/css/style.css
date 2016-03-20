@@ -277,21 +277,21 @@ input, textarea{
 
                                     /*EVENTS*/
 
-.our-events, .event1, .event2, .event3, .event1-photos{
+.our-events, .event1, .event2, .event3, .event1-photos, .shop-photos{
     width: 100%;
     overflow: hidden;
     margin-top: 50px;
 }
-.our-events-text, .event2-text, .event1-photos-text{
+.our-events-text, .event2-text, .event1-photos-text, .shop-photos-text{
     width: 60%;
     float: left;
 }
-.our-events-img, .event2-img, .event1-photos-img{
+.our-events-img, .event2-img, .event1-photos-img, .shop-photos-img{
     width: 40%;
     float: right;
 }
 .our-events-img img, .event2-img img, 
-.event1-photos-img img, .event1-photos-img img{
+.event1-photos-img img, .shop-photos-img img{
     width: 100%;
     max-width: 90%;
     float: right;
@@ -309,7 +309,7 @@ input, textarea{
     width: 60%;
     float: right;
 }
-.event1-photos{
+.event1-photos, .shop-photos{
     margin-bottom: 50px;
 }
                 /*EVENT1*/
