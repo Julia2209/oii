@@ -13,13 +13,11 @@ box-sizing:border-box;
   width: 100%;
 }
 header .wrapper {
-  background: url(../img/logo) left center no-repeat;
-  padding: 8.33333% 4.16667% 8.33333% 36.66667%;
-  background-size: 33.91667% auto;
+  height: 80px;
   background-color: #14242F;
 }
 header:after {
-  content: "";
+  content: url(../img/header_text.png);
   display: block;
   height: 580px;
   width: 100%;
@@ -39,13 +37,6 @@ header:after {
 @media only screen and (max-width: 600px) {
   body {
     font-size: .75em; }
-}
-@media only screen and (min-width: 1200px) {
-.wrapper {
-    width:100%; }
-	header .wrapper {
-	  padding: 100px 50px 100px 440px; }
-
 }
 /* </div> 
                 
