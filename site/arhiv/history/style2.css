@@ -1,0 +1,214 @@
+@charset "utf-8";
+
+*{
+	margin:0;
+	padding:0;
+}
+
+ul {
+	list-style:none;
+}
+
+a {
+	text-decoration:none;
+}
+
+body{
+	background: #FDF5F2;
+	font: 12px/1.666 Gotham, "Helvetica Neue", Helvetica, Arial, sans-serif; 
+	
+}
+
+.wrapper { 
+	width:100%;
+	margin:0 auto;
+}
+.container {
+    width: 100%;
+}
+
+					/*HEADER BEGIN*/
+
+header {
+	background:#14242f;
+	height: 80px;
+	width:1600px;
+	position:fixed;
+	top:0;
+	left: 0;
+}
+
+header h1 {
+	float:left;
+	margin: 14px 0 0 273px;
+	
+}
+nav {
+	float: right;
+	clear: right;
+	margin: 0 273px 0 0;
+}
+
+nav li {
+	float:right;
+	margin: 22px 0 0 50px;
+}
+
+nav li a{
+	font: 40px "Hair-2";
+	color: #D6D6D6;
+	
+}
+
+nav li a:hover{
+	font-weight: bold;
+	text-decoration: underline;
+}
+
+nav li.current a{
+	font-weight: bold;
+	text-decoration: underline;
+	
+}
+a.search{
+	-webkit-filter: brightness(50%);
+}
+a.search:hover{
+	-webkit-filter: brightness(100%);
+}
+
+					/*HEADER END*/
+					
+.header_block{
+	background:url(img/bg_header_block.png) no-repeat 0 0;
+	height: 297px;
+	padding: 330px 350px 0 252px;
+}
+
+p.under_main_p{
+	color: #FDF5F2;
+	font: 40px "Hair-2";
+	font-weight: bold;
+	margin-bottom: -30px;
+	margin-left:6px;
+}
+
+p.main_p{
+	color:#FDF5F2;
+	font: 172px Impact;
+}
+p.addit_p{
+	color:#FDF5F2;
+	font: 28px "Hair-2";
+	font-weight: bold;
+	float:right;
+	margin-top: -60px;
+	margin-right:20px;
+}
+h2{
+	color: #14242F;
+	font-size: 70px;
+}
+h3{
+	color: #14242F;
+	font-size: 40px;
+}
+p{
+	font-size:14px;
+}
+.news_block_left{
+	float:left;
+	width: 600px;
+	margin:0 0 0 252px;	
+}
+.news_block_left img{
+	margin-top: 50px;
+}
+.new_block_right{
+	float:right;
+	width:450px;
+	margin:0 252px 0 0;
+}
+.new_block_right p{
+	margin-top: 40px;
+}
+.what_we_do_block{
+	width:1100px;
+	float:left;
+	margin: 50px 0 0 252px;
+}
+.back_under_photos{
+	float:left;
+	background:#ebe5da;
+	width:1600px;
+	height:1600;
+	margin:50px 0 0 0;
+}
+.back_under_photos h2{
+	text-align:center;
+}
+.content{
+	float:left;
+	margin:50px 0 0 0;
+}
+.preview_photos img{
+	height: 270px;
+	width:450px;
+	
+}
+.photo1 a{
+	float:left;
+	margin: 20px 0 0 350px;
+}
+.photo2 a{
+	float:right;
+	margin: 20px 350px 0 0;
+}
+.photo3 a{
+	float:left;
+	margin: -6px 0 50px 350px;
+}
+.photo4 a{
+	float:right;
+	margin: -6px 350px 50px 0;
+}
+.preview_photos img:hover{
+	-webkit-filter: brightness(45%);
+}
+.see_news {
+	wwidth:1100px;
+	float:left;
+	margin: 50px 0 50px 252px;
+}
+
+.logo_footer img{
+	display:block;
+	margin: 50px auto;  
+}
+footer{
+	float:left;
+	height:120px;
+	width:1600px;
+	background:#14242F;
+}
+footer .copyright p{
+	color:#FDF5F2;
+	margin: 50px 0 0 252px;
+	font-size:12px;
+	opacity: 0.5;
+}
+.cosial_networks ul{
+	float:right;
+	margin-right:252px;
+}
+.cosial_networks li{
+	float:right;
+	margin: -23px 20px 0 0;
+}
+.cosial_networks li{
+	-webkit-filter: brightness(50%);
+}
+.cosial_networks li:hover{
+	-webkit-filter: brightness(100%);
+}
+
