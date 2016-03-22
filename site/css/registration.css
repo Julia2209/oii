@@ -1,0 +1,15 @@
+.registration{
+	padding-top: 59px;
+}
+.input-e-mail-registration{
+	width: 50%;
+}
+.input-day, .input-month, .input-year{
+	width: 10%;
+}
+.year{
+	padding-bottom: 5px;
+}
+#birthday{
+	padding: 5px 0;
+}

@@ -1,0 +1,102 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Contacts</title>
+
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/slider.css"> 
+    <link rel="stylesheet" href="css/screen.css">
+    <link rel="stylesheet" href="css/registration.css">
+    
+</head>
+<body>
+	<div class="container">
+        <div class="navigation">
+        	<div class="navigation-bar-list">
+	        	<ul class="nav-bar">
+	        		<li class="enter"><a href="#" title="enter">Войти</a></li>
+	        		<li class="registration"><a href="#" title="registration">Зарегистрироваться</a></li>
+	        	</ul>
+	        </div>
+        </div>
+
+	   <header class="content-header">
+            <div class="wrapper">
+                <img src="img/logo.png" alt="logo" title="logo">
+
+                <div class="list-menu">
+                    <ul class="navbar">
+                        <li><a class="search" href="search.html"><img src="img/search1.png" alt="search1" title="search"></a></li>
+                        <li><a href="contacts.html" title="contacts">Контакты</a></li>
+                        <li><a href="expositions.html" title="expositions">Выставки</a></li>
+                        <li><a href="shop.html" title="shop">Магазин</a></li>
+                        <li class="current"><a href="index.html" title="about us">О нас</a></li>
+                    </ul>
+                </div>
+            </div>
+        </header>
+
+    	<div class="content">
+    		<div class="registration">
+	    		<h3>Регистрация: </h3>
+				<form onsubmit="return validate(this);" name="registration-form" method="POST" action="#" >
+					<div class="login">
+						<input class="input-login" id="login" value="" type="text" name="login" placeholder="Логин"></input>
+					</div>
+					<div class="name">
+						<input class="input-name" id="name" value="" type="text" name="name" placeholder="Имя"></input>
+					</div>
+					<div class="surname">
+						<input class="input-surname" type="text" id="surname" name="surname" placeholder="Фамилия"></input>
+					</div>
+					<p id="birthday">Дата рождения: </p>
+					<div class="birthday">
+						<input class="input-birthday" type="date" id="birthday" name="birthday" placeholder="XX-XX-XXXX"></input>
+					</div>
+					<div class="e-mail-registration">
+						<input class="input-e-mail-registration" type="text" id="e-mail" name="e-mail" placeholder="E-mail"></input>
+					</div>
+					<div class="password1">
+						<input class="input-password" type="password" id="password" name="pass" placeholder="Пароль"></input>
+					</div>
+					<div class="password2">
+						<input class="input-password" type="password" id="password" name="password" placeholder="Повторите пароль"></input>
+					</div>
+					<input type="button" name="submit" value="Зарегистрироваться" onclick="validate()"></input>
+				</form>
+			</div>
+
+			<div class="button-block">
+				<button class="button-contact">Зарегистироваться</button>
+			</div>
+	    </div>
+
+
+    	<div class="logo_footer">
+            <img src="img/logo_footer.png" alt="logo_footer">
+        </div>
+
+		<div class="footer">
+		    <div class="footer-container">
+		        <div class="copyright">
+		            <p>All rights reserved &copy; by Julia Kharchenko and Ann Nikolaeva INSPIRATION .2016</p> 
+		        </div>
+		        <div class="social_networks">
+		            <ul class="footer-links-list">
+		                <li><a href="instagram.com"><img src="img/icon_instagram.png" alt="icon_instagram"></a></li>
+		                <li><a href="instagram.com"><img src="img/icon_facebook.png" alt="icon_facebook"></a></li>
+		                <li><a href="instagram.com"><img src="img/icon_twitter.png" alt="icon_twitter"></a></li>
+		                <li><a href="instagram.com"><img src="img/icon_vk.png" alt="icon_vk"></a></li>
+		            </ul>
+		        </div>
+		    </div>
+		</div>
+    </div>
+
+    <script type="text/javascript" src="js/jquery-1.12.1.min.js"></script>
+    <script type="text/javascript" src="js/script.js"></script>
+    <script type="text/javascript" src="js/registration.js"></script>
+
+</body>
+</html>
