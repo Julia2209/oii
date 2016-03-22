@@ -1,63 +1,53 @@
-function validate(ob){
+function validateEmail(){
 
-	var login = document.getElementById('login');
-	var pass = document.getElementById('pass');
-	var password = getElementById('password');
-	var date = ob.date.value.split('-');
-	var errors="";
+	var x = document.getElementById('e-mail').value;
+	var atpos=x.indexOf("@");
+	var dotpos=x.lastIndexOf(".");
 
-	if(login == "" || pass == "" || password == ""){
+	if(atpos<1 || dotpos < atpos+2 || dotpos+2>=x.length){
+
+		document.getElementById('lable-e-mail').innerHTML = '(некоректный)';
 		return false;
-	}
-	if(pass!=password){
-		errors += "Passwors not ientity \n";
-	}
-	if(data[0]<1930){
-		errors+="Указана неверная дата рождения! \n";
-	}
-
-	if(errors=="")
+	} else {
+		document.getElementById('lable-e-mail').innerHTML = '';
 		return true;
-	else{
-		alert(errors);
-		return false;
 	}
 }
 
+function validateName(){
 
+	var x=document.getElementById('name').value;
 
+	if (x.length < 3) {
 
-/*function CheckFields(){
+		document.getElementById('lable-name').innerHTML = '(мин. 2 символа)';
+		return false;
 
-	var checkLogin = false;
-	var checkNmae = false;
-	var checkSurname = false;
-	var checkDay = false;
-	var checkMonth = false;
-	var checkYear = false;
-	var checkPassword = false;
-	var ckeckEmail = false;
+	} else {
 
-	ValueLogin = document.getElementById('login');
-
-	if(ValueLogin.value !='' && ValueLogin != underfined){
-
-		checkLogin = true;
-
-		if(ValuePassword.value !='' && ValuePassword != underfined){
-
-			checkPassword = true;
-		}
-
-		else alert('Укажите пароль!');
+		document.getElementById('lable-name').innerHTML = '';
+		return true;
 	}
+}
 
-	else alert('Укажите логин!')
+function validateSurname(){
 
-	if(checkLogin){
+	var x=document.getElementById('surname').value;
 
-		document.getElementById("registration-form").submit();
+	if (x.length < 3) {
 
+		document.getElementById('lable-surname').innerHTML = '(мин. 2 символа)';
+		return false;
+
+	} else {
+
+		document.getElementById('lable-surname').innerHTML = '';
+		return true;
 	}
+}
+function checkall(){
 
-}*/
+	if(validateEmail() && validateName()) return true;
+	else return false;
+
+}

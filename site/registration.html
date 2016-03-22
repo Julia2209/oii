@@ -40,22 +40,25 @@
     	<div class="content">
     		<div class="registration">
 	    		<h3>Регистрация: </h3>
-				<form onsubmit="return validate(this);" name="registration-form" method="POST" action="#" >
+				<form onSubmit="return checkall()" name="registration-form" method="POST" action="#" >
 					<div class="login">
 						<input class="input-login" id="login" value="" type="text" name="login" placeholder="Логин"></input>
 					</div>
+					<label for="name">Имя * <span id="lable-name"></span></label>
 					<div class="name">
-						<input class="input-name" id="name" value="" type="text" name="name" placeholder="Имя"></input>
+						<input class="input-name" id="name" value="" type="text" name="name" onBlur="validateName()"></input>
 					</div>
+					<label for="surname">Фамилия * <span id="lable-surname"></span></label>
 					<div class="surname">
-						<input class="input-surname" type="text" id="surname" name="surname" placeholder="Фамилия"></input>
+						<input class="input-surname" type="text" id="surname" name="surname" onBlur="validateSurname()"></input>
 					</div>
 					<p id="birthday">Дата рождения: </p>
 					<div class="birthday">
 						<input class="input-birthday" type="date" id="birthday" name="birthday" placeholder="XX-XX-XXXX"></input>
 					</div>
+					<label for="e-mail">E-mail * <span id="lable-e-mail"></span></label>
 					<div class="e-mail-registration">
-						<input class="input-e-mail-registration" type="text" id="e-mail" name="e-mail" placeholder="E-mail"></input>
+						<input class="input-e-mail-registration" type="text" id="e-mail" name="e-mail" onBlur="validateEmail()"></input>
 					</div>
 					<div class="password1">
 						<input class="input-password" type="password" id="password" name="pass" placeholder="Пароль"></input>
@@ -63,7 +66,7 @@
 					<div class="password2">
 						<input class="input-password" type="password" id="password" name="password" placeholder="Повторите пароль"></input>
 					</div>
-					<input type="button" name="submit" value="Зарегистрироваться" onclick="validate()"></input>
+					<input type="submit" name="submit" id="submit" value="Зарегистрироваться"></input>
 				</form>
 			</div>
 
