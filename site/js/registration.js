@@ -45,6 +45,27 @@ function validateSurname(){
 		return true;
 	}
 }
+function validatePass(){
+
+	var x1 = document.getElementById('pass').value;
+	var x2 = document.getElementById('password').value;
+
+	if (x1 != x2){
+
+		document.getElementById('pass').innerHTML = '(пароли не совпадают)';
+		document.getElementById('password').innerHTML = '(пароли не совпадают)';
+		return false;
+
+	} else {
+
+		document.getElementById('pass').innerHTML = '';
+		document.getElementById('password').innerHTML = '';
+
+		return true;
+
+	}
+
+}
 function checkall(){
 
 	if(validateEmail() && validateName()) return true;
