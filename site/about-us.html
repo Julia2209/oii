@@ -12,13 +12,24 @@
     
 </head>
 
-<body>
+<body onload="digitalWatch()">
 <script type="text/javascript">
 
-        function hiddenBlock(){
+    function hiddenBlock(){
         var block = document.getElementById('hidden_block').style.display;
         document.getElementById('hidden_block').style.display = (block == 'block') ? 'none' : 'block';
     }
+    function digitalWatch() {
+        var date = new Date();
+        var hours = date.getHours();
+        var minutes = date.getMinutes();
+        var seconds = date.getSeconds();
+        if (hours < 10) hours = "0" + hours;
+        if (minutes < 10) minutes = "0" + minutes;
+        if (seconds < 10) seconds = "0" + seconds;
+        document.getElementById("clock").innerHTML = hours + ":" + minutes + ":" + seconds;
+        setTimeout("digitalWatch()", 1000);
+  }
 
 </script>
     <div class="container">
@@ -44,6 +55,7 @@
                         <li  class="current"><a href="about-us.html" title="about us" onmouseover=hiddenBlock() onmouseout=hiddenBlock()>О нас</a></li>
                     </ul>
                     <div id="hidden_block">Сайт был создан украинскими студентками и просто хорошими людьми Юлией Харченко и Анной Николевой в апреле 2016 года как основной проект Интернет технологий в сфере технологий и культуры.</div>
+                    <div class="clock-block" ><p id="clock"></p></div>
                 </div>
             </div>
         </header>
