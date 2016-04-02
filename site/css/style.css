@@ -250,7 +250,7 @@ img[title="search"]:hover{
     padding-left: 13%;
     padding-top: 40px;
     font-size: 12px;
-    color: #444;
+    color: #b6bca2;
 }
 .footer-links-list{
     margin-right: 13%;
@@ -305,6 +305,7 @@ input, textarea{
     width: 100%;
     overflow: hidden;
     margin-bottom: 40px;
+    margin-top: 20px;
 }
 .waiting-for-you{
     width: 100%;
@@ -365,3 +366,12 @@ input, textarea{
     margin-bottom: 50px;
 }
                 /*EVENT1*/
+
+#extra-info{
+    display: none;
+    color: #14242f;
+}
+.extra-info-click{
+    color: #14242f;
+    text-decoration: underline;
+}
