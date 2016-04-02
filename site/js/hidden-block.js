@@ -1,7 +1,6 @@
 $(document).ready(function(){
-	$('about-us-with-hidden-block').hover(function(){
-    $('#hidden_block').stop().fadeIn("slow");
-    }, function () {
-        $('#hidden_block').stop().fadeOut("slow");
-   });
+	function hiddenBlock(){
+		var block = document.getElementById('hidden_block').style.display;
+		document.getElementById('hidden_block').style.display = (block == 'inline') ? 'none' : 'inline';
+	}
 })

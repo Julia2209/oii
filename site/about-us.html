@@ -13,6 +13,14 @@
 </head>
 
 <body>
+<script type="text/javascript">
+
+        function hiddenBlock(){
+        var block = document.getElementById('hidden_block').style.display;
+        document.getElementById('hidden_block').style.display = (block == 'block') ? 'none' : 'block';
+    }
+
+</script>
     <div class="container">
         <div class="navigation">
         	<div class="navigation-bar-list">
@@ -33,9 +41,9 @@
                         <li><a href="contacts.html" title="contacts">Контакты</a></li>
                         <li><a href="events.html" title="expositions">Выставки</a></li>
                         <li><a href="shop.html" title="shop">Магазин</a></li>
-                        <li class="current"><a href="about-us.html" title="about us">О нас</a><div id="hidden_block"><p>Hello!</p></div></li>
+                        <li  class="current"><a href="about-us.html" title="about us" onmouseover=hiddenBlock() onmouseout=hiddenBlock()>О нас</a></li>
                     </ul>
-                    
+                    <div id="hidden_block">Сайт был создан украинскими студентками и просто хорошими людьми Юлией Харченко и Анной Николевой в апреле 2016 года как основной проект Интернет технологий в сфере технологий и культуры.</div>
                 </div>
             </div>
         </header>
@@ -158,7 +166,6 @@
     <script type="text/javascript" src="js/jquery-1.12.1.min.js"></script>
     <script type="text/javascript" src="js/script.js"></script>
     <script type="text/javascript" src="js/slider.js"></script>
-    <script type="text/javascript" src="js/hidden-block.js"></script>
     
 </body>
 

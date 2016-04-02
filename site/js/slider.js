@@ -1,10 +1,7 @@
 jQuery(document).ready(function(){
 	function htmSlider(){
-		/* Зададим следующие переменные */
 
-		/* обертка слайдера */
 		var slideWrap = jQuery('.slide-wrap');
-		/* ссылки на предудыщий иследующий слайд */
 		var nextLink = jQuery('.next-slide');
 		var prevLink = jQuery('.prev-slide');
 
@@ -12,13 +9,10 @@ jQuery(document).ready(function(){
 		
 		var is_animate = false;
 		
-		/* ширина слайда с отступами */
 		var slideWidth = jQuery('.slide-item').outerWidth();
 		
-		/* смещение слайдера */
 		var newLeftPos = slideWrap.position().left - slideWidth;
 		
-		/* Клик по ссылке на следующий слайд */
 		nextLink.click(function(){
 			if(!slideWrap.is(':animated')) {
 	
@@ -33,7 +27,6 @@ jQuery(document).ready(function(){
 			}
 		});
 
-		/* Клик по ссылке на предыдующий слайд */
 		prevLink.click(function(){
 			if(!slideWrap.is(':animated')) {
 			
@@ -48,7 +41,6 @@ jQuery(document).ready(function(){
 		});
 		
 		
-		/* Функция автоматической прокрутки слайдера */
 		function autoplay(){
 			if(!is_animate){
 				is_animate = true;
@@ -63,7 +55,6 @@ jQuery(document).ready(function(){
 			}
 		}
 		
-		/* Клики по ссылкам старт/пауза */
 		playLink.click(function(){
 			if(playLink.hasClass('play')){
 				playLink.removeClass('play').addClass('pause');
@@ -78,6 +69,5 @@ jQuery(document).ready(function(){
 
 	}
 
-	/* иницилизируем функцию слайдера */
 	htmSlider();
 });
