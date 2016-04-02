@@ -73,6 +73,14 @@ p{
     text-decoration: none;
     color: #444;
 }
+#hidden_block{
+    display: none;
+    width: 100px;
+    background-color: red;
+}
+.list-menu li a:hover,  .list-menu li a:active {
+    text-decoration:underline;
+}
 
                                        /*MENU*/
 
