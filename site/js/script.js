@@ -27,5 +27,28 @@ function diplay_hide(blockId){
             $(blockId).animate({height: 'hide'}, 500); 
         }
 
-}
-
+    }
+    
+var h_hght = $('.navigation').outerHeight();; // высота шапки
+var h_mrg = 0;    // отступ когда шапка уже не видна
+                 
+$(function(){
+ 
+    var elem = $('.wrapper');
+    var top = $(this).scrollTop();
+     
+    if(top > h_hght){
+        elem.css('top', h_mrg);
+    }           
+     
+    $(window).scroll(function(){
+        top = $(this).scrollTop();
+         
+        if (top+h_mrg < h_hght) {
+            elem.css('top', (h_hght-top));
+        } else {
+            elem.css('top', h_mrg);
+        }
+    });
+ 
+});
