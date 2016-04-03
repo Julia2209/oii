@@ -1,0 +1,197 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Name>ExhibitionCenter</Name>
+    <ProjectGuid>bc0cbaec-24e4-48d2-b3c7-b592be62ab72</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <RootNamespace>
+    </RootNamespace>
+    <ProjectTypeGuids>{A0786B88-2ADB-4C21-ABE8-AA2D79766269}</ProjectTypeGuids>
+    <AssemblyName>ExhibitionCenter</AssemblyName>
+    <SaveServerSettingsInUserFile>false</SaveServerSettingsInUserFile>
+    <Runtime>PHP</Runtime>
+    <RuntimeVersion>5.6</RuntimeVersion>
+    <EnvName>PHPDev</EnvName>
+    <PHPDevHostName>localhost</PHPDevHostName>
+    <PHPDevAutoPort>true</PHPDevAutoPort>
+    <PHPDevPort>1234</PHPDevPort>
+    <CustomServerUrl>http://localhost</CustomServerUrl>
+    <CustomXdebugPort>9000</CustomXdebugPort>
+    <PublishEvent>None</PublishEvent>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)' == 'Debug' ">
+    <IncludeDebugInformation>true</IncludeDebugInformation>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)' == 'Release' ">
+    <IncludeDebugInformation>false</IncludeDebugInformation>
+  </PropertyGroup>
+  <ItemGroup>
+    <Compile Include="ApiController.php" />
+    <Compile Include="login.php" />
+    <Compile Include="about-us.php" />
+    <Compile Include="database\AccountController.php" />
+    <Compile Include="database\DatabaseContext.php" />
+    <Compile Include="template.about-us.php" />
+    <Compile Include="template.login.php" />
+    <Compile Include="template.php" />
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="css\" />
+    <Folder Include="image\" />
+    <Folder Include="image\bg\" />
+    <Folder Include="image\bilding\" />
+    <Folder Include="image\gallery\" />
+    <Folder Include="image\history\" />
+    <Folder Include="image\pages\" />
+    <Folder Include="image\pages\jpg\" />
+    <Folder Include="image\pages\psd\" />
+    <Folder Include="image\people\" />
+    <Folder Include="image\trash\" />
+    <Folder Include="img\" />
+    <Folder Include="js\" />
+    <Folder Include="database\" />
+    <Folder Include="Properties\" />
+    <Folder Include="Properties\PublishProfiles\" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="css\registration.css" />
+    <Content Include="css\screen.css" />
+    <Content Include="css\slider.css" />
+    <Content Include="css\style.css" />
+    <Content Include="image\bg\beautiful_mountain_scenery_2-wallpaper-3840x2160.jpg" />
+    <Content Include="image\bg\bg1.jpg" />
+    <Content Include="image\bg\bg10.jpg" />
+    <Content Include="image\bg\bg2.jpg" />
+    <Content Include="image\bg\bg3.jpg" />
+    <Content Include="image\bg\bg4.jpg" />
+    <Content Include="image\bg\bg6.jpg" />
+    <Content Include="image\bg\bg7.jpg" />
+    <Content Include="image\bg\bg8.jpg" />
+    <Content Include="image\bg\bg9.jpg" />
+    <Content Include="image\bg\forest_64-wallpaper-3840x2160.jpg" />
+    <Content Include="image\bg\forest_path_2-wallpaper-2560x1440.jpg" />
+    <Content Include="image\bg\gran_sasso_ditalia_2-wallpaper-1920x1080.jpg" />
+    <Content Include="image\bg\lovely_forest-wallpaper-3840x2160.jpg" />
+    <Content Include="image\bg\mountain_road-wallpaper-3840x2160.jpg" />
+    <Content Include="image\bg\spruces_on_mountain_sunset-wallpaper-1920x1080.jpg" />
+    <Content Include="image\bilding\048731097de322302aff7e52151c991d_XL.jpg" />
+    <Content Include="image\bilding\1.jpg" />
+    <Content Include="image\bilding\523616.jpg" />
+    <Content Include="image\bilding\allanhall1.jpg" />
+    <Content Include="image\bilding\centr_h3_designzoom_ru_01.jpg" />
+    <Content Include="image\bilding\DSC_6548_resize.jpg" />
+    <Content Include="image\bilding\you.jpg" />
+    <Content Include="image\bilding\yume-marche-store-chiba-japan-07.jpg" />
+    <Content Include="image\gallery\10__Wolfgang_Tillmans_20100.jpg" />
+    <Content Include="image\gallery\28985323.jpg" />
+    <Content Include="image\gallery\59919-640x360-photographers-gallery-2012-640.jpg" />
+    <Content Include="image\gallery\arco-madrid-2013.jpg" />
+    <Content Include="image\gallery\art-gal.jpg" />
+    <Content Include="image\gallery\avini_installation-view-i-20-gallery_2009-1.jpg" />
+    <Content Include="image\gallery\gallery %281%29.jpg" />
+    <Content Include="image\gallery\gallery %282%29.jpg" />
+    <Content Include="image\gallery\gallery.jpg" />
+    <Content Include="image\gallery\IMG_6979.jpg" />
+    <Content Include="image\gallery\Leica-Gallery-Warsaw-inside_teaser-crop-480x320.png" />
+    <Content Include="image\gallery\leica2.jpg" />
+    <Content Include="image\gallery\map.jpg" />
+    <Content Include="image\gallery\People-checking-out-art-at-Gallery-Crawl.jpg" />
+    <Content Include="image\gallery\people-in-wynwood-art-gallery.jpg" />
+    <Content Include="image\gallery\uzn_1400158383.gif" />
+    <Content Include="image\history\tamplate_site-Recovered.jpg" />
+    <Content Include="image\history\tamplate_site2.jpg" />
+    <Content Include="image\history\tamplate_site2_prevue.jpg" />
+    <Content Include="image\history\tamplate_site3.jpg" />
+    <Content Include="image\history\tamplate_site_END.jpg" />
+    <Content Include="image\history\tamplate_site_pre_end.jpg" />
+    <Content Include="image\pages\jpg\pages.rar" />
+    <Content Include="image\pages\jpg\tamplate_site_contacts_pre_end1.jpg" />
+    <Content Include="image\pages\jpg\tamplate_site_events_pre_end1.jpg" />
+    <Content Include="image\pages\jpg\tamplate_site_photos_pre_end1.jpg" />
+    <Content Include="image\pages\jpg\tamplate_site_pre_end_2.jpg" />
+    <Content Include="image\pages\jpg\tamplate_site_shop_pre_end1.jpg" />
+    <Content Include="image\pages\psd\tamplate_site-Recovered.psd" />
+    <Content Include="image\pages\psd\tamplate_site.psd" />
+    <Content Include="image\pages\psd\tamplate_site2.psd" />
+    <Content Include="image\pages\psd\tamplate_site_contacts.psd" />
+    <Content Include="image\pages\psd\tamplate_site_events.psd" />
+    <Content Include="image\pages\psd\tamplate_site_photos.psd" />
+    <Content Include="image\pages\psd\tamplate_site_shop.psd" />
+    <Content Include="image\people\6a00d834515c6d69e201b7c7493801970b.jpg" />
+    <Content Include="image\people\bridging-smiling-woman.png" />
+    <Content Include="image\people\fashion-girl-pretty-style-Favim.com-308860.jpg" />
+    <Content Include="image\people\fashion-girl-pretty-style-Favim.com-537688.jpg" />
+    <Content Include="image\people\Girl-at-desk.jpg" />
+    <Content Include="image\people\o-WOMAN-AT-WORK-facebook.jpg" />
+    <Content Include="image\people\sector1.jpg" />
+    <Content Include="image\people\Succeed-by-failing-working-woman.jpg" />
+    <Content Include="image\people\woman-work.jpg" />
+    <Content Include="image\people\Woman-working-desk-iStock-425.jpg" />
+    <Content Include="image\people\young-male.jpg" />
+    <Content Include="image\people\Young_man_exhibiting_a_serious_expression.jpg" />
+    <Content Include="image\trash\blue_daisies-wallpaper-1600x900.jpg" />
+    <Content Include="image\trash\business-wallpaper-1600x900.jpg" />
+    <Content Include="image\trash\on_wind-wallpaper-1600x900.jpg" />
+    <Content Include="image\trash\sunflower_25-wallpaper-1600x900.jpg" />
+    <Content Include="image\trash\you.jpg" />
+    <Content Include="img\art1.png" />
+    <Content Include="img\art2.png" />
+    <Content Include="img\art3.png" />
+    <Content Include="img\art4.png" />
+    <Content Include="img\bg1.jpg" />
+    <Content Include="img\bg10.jpg" />
+    <Content Include="img\bg2.jpg" />
+    <Content Include="img\bg3.jpg" />
+    <Content Include="img\bg4.jpg" />
+    <Content Include="img\bg5.jpg" />
+    <Content Include="img\bg7.jpg" />
+    <Content Include="img\bg8.jpg" />
+    <Content Include="img\bg9.jpg" />
+    <Content Include="img\bg_header_block.png" />
+    <Content Include="img\button-left.png" />
+    <Content Include="img\button-right.png" />
+    <Content Include="img\event2.png" />
+    <Content Include="img\event3.png" />
+    <Content Include="img\events-galery.png" />
+    <Content Include="img\header_text.png" />
+    <Content Include="img\hover_photo1.png" />
+    <Content Include="img\hover_photo2.png" />
+    <Content Include="img\hover_photo3.png" />
+    <Content Include="img\hover_photo4.png" />
+    <Content Include="img\icon_facebook.png" />
+    <Content Include="img\icon_instagram.png" />
+    <Content Include="img\icon_twitter.png" />
+    <Content Include="img\icon_vk.png" />
+    <Content Include="img\invasion.png" />
+    <Content Include="img\logo.png" />
+    <Content Include="img\logo_footer.png" />
+    <Content Include="img\map.png" />
+    <Content Include="img\news_women.png" />
+    <Content Include="img\photo2.png" />
+    <Content Include="img\photo3.png" />
+    <Content Include="img\photo4.png" />
+    <Content Include="img\photo_news.png" />
+    <Content Include="img\photo_news2.png" />
+    <Content Include="img\preview1.png" />
+    <Content Include="img\search.png" />
+    <Content Include="img\search1.png" />
+    <Content Include="img\sector1.jpg" />
+    <Content Include="img\slider-event1.png" />
+    <Content Include="img\slider-event2.png" />
+    <Content Include="img\slider-event3.png" />
+    <Content Include="img\slider-event4.png" />
+    <Content Include="img\slider-event5.png" />
+    <Content Include="img\slider-event6.png" />
+    <Content Include="img\slider-event7.png" />
+    <Content Include="img\slider-event8.png" />
+    <Content Include="img\womens.png" />
+    <Content Include="img\you.jpg" />
+    <Content Include="js\jquery-1.12.1.min.js" />
+    <Content Include="js\registration.js" />
+    <Content Include="js\script.js" />
+    <Content Include="js\slider.js" />
+    <Content Include="Properties\PublishProfiles\anikolayeva.phppub" />
+    <Content Include="Properties\PublishProfiles\anikolayeva.phppub.user" />
+  </ItemGroup>
+</Project>
