@@ -1,54 +1,52 @@
-jQuery('document').ready(function(){
 
-	/*alert("hello");
+function hiddenBlock() {
+    var block = document.getElementById('hidden_block').style.display;
+    document.getElementById('hidden_block').style.display = (block == 'block') ? 'none' : 'block';
+}
 
-	$outer-container=$("#outer-container");
-	$thumbScroller=$("#thumbScroller");
-	$thumbScroller_container=$("#thumbScroller .container");
-	$thumbScroller_content=$("#thumbScroller .content");
-	$thumbScroller_thumb=$("#thumbScroller .thumb");
+function digitalWatch() {
+    var date = new Date();
+    var hours = date.getHours();
+    var minutes = date.getMinutes();
+    var seconds = date.getSeconds();
+    if (hours < 10) hours = "0" + hours;
+    if (minutes < 10) minutes = "0" + minutes;
+    if (seconds < 10) seconds = "0" + seconds;
+    document.getElementById("clock").innerHTML = hours + ":" + minutes + ":" + seconds;
+    setTimeout("digitalWatch()", 1000);
+}
 
-	var sliderWidth=$thumbScroller.width();
-	var itemWidth=$thumbScroller_content.width();
-	 
-	$thumbScroller_content.each(function (i) {
-	    totalContent=i*itemWidth;   
-	    $thumbScroller_container.css("width",totalContent+itemWidth);
-	});
-	 
-	$thumbScroller.mousemove(function(e){
-	    var mouseCoords=(e.pageX - this.offsetLeft);
-	      var mousePercentY=mouseCoords/sliderWidth;
-	      var destY=-(((totalContent-(sliderWidth-itemWidth))-sliderWidth)*(mousePercentY));
-	      var thePosA=mouseCoords-destY;
-	      var thePosB=destY-mouseCoords;
-	      if(mouseCoords==destY){
-	        $thumbScroller_container.stop();
-	      }
-	      if(mouseCoords>destY){
-	        $thumbScroller_container.css("left",-thePosA);
-	      }
-	      if(mouseCoords<destY){
-	        $thumbScroller_container.css("left",thePosB);
-	      }
-	});
-	 
-	var fadeSpeed=300;
-	 
-	$thumbScroller_thumb.each(function () {
-	    var $this=$(this);
-	    $this.fadeTo(fadeSpeed, 0.5);
-	});
-	 
-	$thumbScroller_thumb.hover(
-	    function(){ //mouse over
-	        var $this=$(this);
-	        $this.stop().fadeTo(fadeSpeed, 1);
-	    },
-	    function(){ //mouse out
-	        var $this=$(this);
-	        $this.stop().fadeTo(fadeSpeed, 0.5);
-	    }
-	);*/
+function diplay_hide(blockId) {
+
+    if ($(blockId).css('display') == 'none') {
+        $(blockId).animate({ height: 'show' }, 500);
+    }
+    else {
+        $(blockId).animate({ height: 'hide' }, 500);
+    }
+
+}
+
+var h_hght = $('.navigation').outerHeight();; // высота шапки
+var h_mrg = 0;    // отступ когда шапка уже не видна
+
+$(function () {
+
+    var elem = $('.wrapper');
+    var top = $(this).scrollTop();
+
+    if (top > h_hght) {
+        elem.css('top', h_mrg);
+    }
+
+    $(window).scroll(function () {
+        top = $(this).scrollTop();
+
+        if (top + h_mrg < h_hght) {
+            elem.css('top', (h_hght - top));
+        } else {
+            elem.css('top', h_mrg);
+        }
+    });
 
 });

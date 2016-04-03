@@ -35,7 +35,7 @@ p{
 }
 
 @font-face{
-    src: url(fonts|6591.ttf);
+    src: url(fonts/6591.ttf);
 }
 
 .header-text{

@@ -33,6 +33,11 @@ p{
     line-height: 1.5;
 	font-size:18px;
 }
+
+@font-face{
+    src: url(fonts/6591.ttf);
+}
+
 .header-text{
     position: absolute;
     margin: 13%;
@@ -54,7 +59,7 @@ p{
 .navigation{
     position: relative;
     background-color: black;
-    height: 30px;
+    height: 35px;
 }
 .navigation ul{
     position: relative;
@@ -71,8 +76,37 @@ p{
 }
 .navigation-bar-list li a{
     text-decoration: none;
-    color: #444;
+    color: #b6bca2;
 }
+.clock-block{
+    position: absolute;
+    left: 13%;
+    top:-25px;
+}
+#clock{
+    color:#b6bca2;
+    font-size: 120%; 
+
+    /*font-weight: bold;*/
+}
+.nav-bar a:hover{
+    text-decoration: underline;
+}
+
+
+#hidden_block{
+    display: none;
+    position: absolute;
+    width: 430px;
+    height: 50px;
+    background-color: #14242F;
+    opacity: 0.8;
+    top: 85px;
+    right: 12%;
+    padding: 10px;
+    color: #fdf5f2;
+}
+
 
                                        /*MENU*/
 
@@ -92,6 +126,9 @@ p{
 .list-menu li a{
     text-decoration: none;
     color: #fdf5f2;
+    position: relative;
+    font-size: 30px;
+    font-family: Hair-2;
 }
 img[title="logo"]{
     width: 50%;
@@ -100,13 +137,22 @@ img[title="logo"]{
     margin: 13px 0 0 13%;
 }
 img[title="search"]{
-    padding-top: 20px;
-    width: 100%;
+    padding-top: 23px;
+    width: 90%;
+    opacity: 0.5;
+}
+img[title="search"]:hover{
+    opacity: 1;
 }
 .list-menu li{
     display: inline;
     float: right;
     margin: 0 0 0 20px;
+    font-weight: initial;
+}
+.list-menu li a:hover,  .list-menu li a:active {
+    text-decoration:underline;
+    font-weight: bold;
 }
 
                                   /*CONTENT*/
@@ -164,9 +210,38 @@ img[title="search"]{
     max-width: 80%;
     height: auto;
 }
+
+.inspiration-block-gallery-photos p, .slide-wrap span{
+    opacity: 0;
+    height: 100%;
+    -webkit-transition: opacity .5s ease-in;  
+    -moz-transition: opacity .5s ease-in;  
+    -o-transition: opacity .5s ease-in;  
+    transition: opacity .5s ease-in;
+    position: absolute;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: black;
+    padding-bottom: 0;
+    color: white;
+    padding: 0;
+    margin: 0;
+    width: 100%;
+}
+.slide-wrap span{
+    text-align: center;
+    font-weight: normal;
+}
 .photo1-photo2, .photo3-photo4, .photo1, .photo2, .photo3, .photo4{
     margin: 0;
     overflow: hidden;
+}
+.photo1, .photo2, .photo3, .photo4{
+    position: relative;
+}
+.photo1:hover p, .photo2:hover p, .photo3:hover p, .photo4:hover p, .slide-title:hover{
+    opacity: 0.6;
 }
 .photo1-photo2{
     width: 50%;
@@ -204,7 +279,7 @@ img[title="search"]{
     padding-left: 13%;
     padding-top: 40px;
     font-size: 12px;
-    color: #444;
+    color: #b6bca2;
 }
 .footer-links-list{
     margin-right: 13%;
@@ -214,6 +289,12 @@ img[title="search"]{
     list-style: none;
     text-align:center;
     line-height: 40px;
+}
+.footer-links-list img{
+    opacity: 0.5;
+}
+.footer-links-list img:hover{
+    opacity: 1;
 }
 .social-networks{
     position: relative;
@@ -253,6 +334,7 @@ input, textarea{
     width: 100%;
     overflow: hidden;
     margin-bottom: 40px;
+    margin-top: 20px;
 }
 .waiting-for-you{
     width: 100%;
@@ -313,3 +395,12 @@ input, textarea{
     margin-bottom: 50px;
 }
                 /*EVENT1*/
+
+#extra-info{
+    display: none;
+    color: #14242f;
+}
+.extra-info-click{
+    color: #14242f;
+    text-decoration: underline;
+}

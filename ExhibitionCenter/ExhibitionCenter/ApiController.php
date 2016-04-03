@@ -10,4 +10,6 @@ if ($functionName == "login") {
     echo AccountController::Authenticate($email,$password);
 
 }
+
+
 ?>
