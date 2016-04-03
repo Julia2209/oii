@@ -1,19 +1,19 @@
-<div class="registration">
-	<h3>Регистрация: </h3>
+п»ї<div class="registration">
+	<h3>Р РµРіРёСЃС‚СЂР°С†РёСЏ: </h3>
 	<form onSubmit="return checkall()" name="registration-form" method="POST" action="#" >
-		<label for="login">Логин * <span id="lable-login"></span></label>
+		<label for="login">Р›РѕРіРёРЅ * <span id="lable-login"></span></label>
 		<div class="login">
 			<input class="input-login" id="login" value="" type="text" name="login" onBlur="validateLogin()"></input>
 		</div>
-		<label for="name">Имя * <span id="lable-name"></span></label>
+		<label for="name">РРјСЏ * <span id="lable-name"></span></label>
 		<div class="name">
 			<input class="input-name" id="name" value="" type="text" name="name" onBlur="validateName()"></input>
 		</div>
-		<label for="surname">Фамилия * <span id="lable-surname"></span></label>
+		<label for="surname">Р¤Р°РјРёР»РёСЏ * <span id="lable-surname"></span></label>
 		<div class="surname">
 			<input class="input-surname" type="text" id="surname" name="surname" onBlur="validateSurname()"></input>
 		</div>
-		<label for="birthday">Дата рождения * <span id="lable-birthday"></span></label>
+		<label for="birthday">Р”Р°С‚Р° СЂРѕР¶РґРµРЅРёСЏ * <span id="lable-birthday"></span></label>
 		<div class="birthday">
 			<input class="input-birthday" type="date" id="birthday" name="birthday" onBlur="validateBirthday()"></input>
 		</div>
@@ -21,18 +21,18 @@
 		<div class="e-mail-registration">
 			<input class="input-e-mail-registration" type="text" id="e-mail" name="e-mail" onBlur="validateEmail()"></input>
 		</div>
-		<label for="pass">Пароль * <span id="lable-pass"></span></label>
+		<label for="pass">РџР°СЂРѕР»СЊ * <span id="lable-pass"></span></label>
 		<div class="pass">
 			<input class="pass" type="password" id="pass" name="pass"></input>
 		</div>
-		<label for="password">Повторите пароль * <span id="lable-password"></span></label>
+		<label for="password">РџРѕРІС‚РѕСЂРёС‚Рµ РїР°СЂРѕР»СЊ * <span id="lable-password"></span></label>
 		<div class="password">
 			<input class="input-password" type="password" id="password" name="password" onBlur="validatePass()"> </input>
 		</div>
-		<input type="submit" name="submit" id="submit" value="Зарегистрироваться"></input>
+		<input type="submit" name="submit" id="submit" value="Р—Р°СЂРµРіРёСЃС‚СЂРёСЂРѕРІР°С‚СЊСЃСЏ"></input>
 	</form>
 </div>
 
 <div class="button-block">
-	<button class="button-contact">Зарегистироваться</button>
+	<button class="button-contact">Р—Р°СЂРµРіРёСЃС‚РёСЂРѕРІР°С‚СЊСЃСЏ</button>
 </div>
