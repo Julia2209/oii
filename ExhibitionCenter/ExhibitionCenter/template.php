@@ -10,13 +10,15 @@
     <link rel="stylesheet" href="css/slider.css">
     <link rel="stylesheet" href="css/screen.css">
 
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
     <script type="text/javascript" src="js/jquery-1.12.1.min.js"></script>
     <script type="text/javascript" src="js/script.js"></script>
     <!--<script type="text/javascript" src="js/slider.js"></script>-->
     <script type="text/javascript" src="js/jquery.cookie.js"></script>
     <script type="text/javascript" src="js/login_logout.js"></script>
     <script type="text/javascript" src="js/registration.js"></script>
-
+    <script type="text/javascript"><?php include $pagescript?></script>
+    
 </head>
 
 <body onload="digitalWatch()">
@@ -88,6 +90,7 @@
             </div>
         </div>
     </div>
+    
 </body>
 
 </html>
