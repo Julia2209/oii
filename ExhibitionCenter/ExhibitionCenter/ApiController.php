@@ -11,5 +11,17 @@ if ($functionName == "login") {
 
 }
 
+if($functionName == "emailExists"){    
+    $email = filter_input(INPUT_GET, 'email');
+    echo AccountController::EmailExists($email);
+}
+
+if($functionName == "register"){
+    $email = filter_input(INPUT_GET, 'email');
+    $password = filter_input(INPUT_GET, 'password');
+    $username = filter_input(INPUT_GET, 'username');
+
+    echo AccountController::Register($email, $password, $username);
+}
 
 ?>

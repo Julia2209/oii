@@ -20,6 +20,12 @@ class DatabaseContext
     public static function UserQuery($email, $password){
         return "SELECT * from Users where Email = '$email' and Password = '$password'";
     }
+    public static function EmailExists($email){
+        return "SELECT * from Users where Email = '$email'";
+    }
+    public static function Register($email, $password, $username){
+        return "INSERT INTO USERS(Email, Password, UserName) Values('$email', '$password', '$username')";
+    }
 }
 
 

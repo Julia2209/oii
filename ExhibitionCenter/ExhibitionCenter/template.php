@@ -13,6 +13,9 @@
     <script type="text/javascript" src="js/jquery-1.12.1.min.js"></script>
     <script type="text/javascript" src="js/script.js"></script>
     <!--<script type="text/javascript" src="js/slider.js"></script>-->
+    <script type="text/javascript" src="js/jquery.cookie.js"></script>
+    <script type="text/javascript" src="js/login_logout.js"></script>
+    <script type="text/javascript" src="js/registration.js"></script>
 
 </head>
 
@@ -21,8 +24,17 @@
         <div class="navigation">
             <div class="navigation-bar-list">
                 <ul class="nav-bar">
-                    <li class="enter"><a href="login.php" title="enter">Войти</a></li>
-                    <li class="registration"><a href="login.php" title="registration">Зарегистрироваться</a></li>
+                    <?php
+                    if (isset($_COOKIE['isLogged'])) {
+                        $userName = $_COOKIE['userName'];
+                        echo "<li>Добро пожаловать, $userName!</li>";
+                        echo "<li><a href='#' id='logout'>Выйти</a></li>";
+                    } else{
+                        echo "<li class='enter'><a href='login.php' title='enter'>Войти</a></li>";
+                        echo "<li class='registration'><a href='registration.php' title='registration'>Зарегистрироваться</a></li>";
+                    }
+
+                    ?>
                 </ul>
             </div>
         </div>

@@ -72,3 +72,41 @@ function checkall(){
 	else return false;
 
 }
+
+$(document).ready(function () {
+    $("#e-mail").blur(function () {
+        var _email = $("#e-mail").val();
+        var emailExists = $.ajax({
+            type: "GET",
+            url: 'ApiController.php',
+            data: { functionName: 'emailExists', email: _email},
+            success: function (data) {
+                if (data === 'true') {
+                    $("#registrationErrorMessage").show();
+                    $("#register").prop('disabled', true);
+                } else {
+                    $("#registrationErrorMessage").hide();
+                    $("#register").prop('disabled', false);
+                }
+            }
+        });
+    });
+
+    $("#register").click(function () {
+        var _email = $("#e-mail").val();
+        var _password = $("#pass").val();
+        var _username = $("#login").val();
+        var emailExists = $.ajax({
+            type: "GET",
+            url: 'ApiController.php',
+            data: { functionName: 'register', email: _email, password: _password, username: _username },
+            success: function (data) {
+                if (data === '1') {
+                    location.href = 'login.php';
+                } else {
+                    location.reload();
+                }
+            }
+        });
+    });
+});
