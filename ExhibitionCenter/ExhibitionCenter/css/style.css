@@ -404,3 +404,53 @@ input, textarea{
     color: #14242f;
     text-decoration: underline;
 }
+
+                            /*PICTURES SHOP*/
+.table-pictures-shop{
+    background-color: #ebe5da;
+    width: 100%;
+}
+table, tr, td{
+    padding: 0;
+    text-align: center;
+    /*border: 1px solid #666;*/
+}
+table img{
+    padding: 20px;
+    width: 80%;
+}
+.name-picture td{
+    padding-left: 20px;
+   /* text-align: center;*/
+}
+.title-shop{
+    overflow: hidden;
+    margin: 50px 0 20px 0;
+}
+.title-shop img{
+    width: 30%;
+    float: right;
+    padding: 0 0 20px 20px;
+}
+.title-shop p{
+    float: left;
+}
+.button-table-shop{
+    text-align: center;
+}
+.red-checked{
+    background: #14242F;
+}
+.none-checked{
+    background: #ebe5da;
+}
+#scroll-up{
+    margin-bottom: 10px;
+}
+#scroll-button{
+    position: absolute;
+    padding-left: 36%;
+}
+.current-item{
+    background-color: #818f7e;
+}

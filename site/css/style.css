@@ -404,3 +404,36 @@ input, textarea{
     color: #14242f;
     text-decoration: underline;
 }
+
+                            /*PICTURES SHOP*/
+.table-pictures-shop{
+    background-color: #ebe5da;
+    width: 100%;
+}
+table, tr, td{
+    /*text-align: center;*/
+    border: 1px solid #666;
+}
+.shop-pictures img{
+    /*padding: 10px;*/
+    width: 100%;
+}
+.name-picture td{
+    padding-left: 10px;
+   /* text-align: center;*/
+}
+.title-shop{
+    overflow: hidden;
+    margin: 50px 0 50px 0;
+}
+.title-shop img{
+    width: 30%;
+    float: right;
+    padding: 0 0 20px 20px;
+}
+.title-shop p{
+    float: left;
+}
+.button-table-shop{
+    text-align: center;
+}

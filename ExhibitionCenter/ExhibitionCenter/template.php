@@ -17,6 +17,7 @@
     <script type="text/javascript" src="js/jquery.cookie.js"></script>
     <script type="text/javascript" src="js/login_logout.js"></script>
     <script type="text/javascript" src="js/registration.js"></script>
+    <script type="text/javascript" src="js/pictures.js"></script>
     <script type="text/javascript"><?php include $pagescript?></script>
     
 </head>
@@ -52,7 +53,7 @@
                         <li><a href="contacts.php" title="contacts">Контакты</a></li>
                         <li><a href="events.php" title="expositions">Выставки</a></li>
                         <li><a href="shop.php" title="shop">Магазин</a></li>
-                        <li  class="current"><a href="about-us.php" title="about us" onmouseover=hiddenBlock() onmouseout=hiddenBlock()>О нас</a></li>
+                        <li  class="current"><a href="about-us.php" id="hover-block" title="about us" onmouseover=hiddenBlock() onmouseout=hiddenBlock()>О нас</a></li>
                     </ul>
                     <div id="hidden_block">Сайт был создан украинскими студентками и просто хорошими людьми Юлией Харченко и Анной Николевой в апреле 2016 года как основной проект Интернет технологий в сфере технологий и культуры.</div>
                     <div class="clock-block" ><p id="clock"></p></div>

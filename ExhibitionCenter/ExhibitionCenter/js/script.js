@@ -26,27 +26,17 @@ function diplay_hide(blockId) {
     }
 
 }
+//function animate_block(blockId) {
+//    $(blockId).hover(
+//     function () {
+//         $(this).parent().find('.hidden_block').fadeIn()
 
-var h_hght = $('.navigation').outerHeight();; // высота шапки
-var h_mrg = 0;    // отступ когда шапка уже не видна
+//     },
+//     function () {
+//         $(this).parent().find('.hidden_block').fadeOut()
+//     });
+//};
 
-$(function () {
 
-    var elem = $('.wrapper');
-    var top = $(this).scrollTop();
 
-    if (top > h_hght) {
-        elem.css('top', h_mrg);
-    }
 
-    $(window).scroll(function () {
-        top = $(this).scrollTop();
-
-        if (top + h_mrg < h_hght) {
-            elem.css('top', (h_hght - top));
-        } else {
-            elem.css('top', h_mrg);
-        }
-    });
-
-});

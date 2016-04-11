@@ -4,6 +4,26 @@ function hiddenBlock(){
     document.getElementById('hidden_block').style.display = (block == 'block') ? 'none' : 'block';
 }
 
+function changeColor()
+{ // forecolor
+    var changeColorBlock = document.getElementById("check-picture");
+    var clickBlock = document.getElementById(".shop-pictures img");
+
+    clickBlock.onclick = function(){
+        changeColorBlock.style.backgroundColor = "#14242f";
+    }
+    //if(clickBlock.clicked == true){
+   //     changeColorBlock.style.backgroundColor = "#14242f";
+   // }
+   // else{
+   //     changeColorBlock.style.backgroundColor = "#ebe5da";
+   // }
+  //if() document.getElementById(id).style.backgroundColor = "#14242f"; // backcolor
+}
+//changeColor();
+
+
+
 function digitalWatch() {
     var date = new Date();
     var hours = date.getHours();
