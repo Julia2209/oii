@@ -5,8 +5,6 @@ jQuery(document).ready(function () {
         var nextLink = jQuery('.next-slide');
         var prevLink = jQuery('.prev-slide');
 
-        var playLink = jQuery('.auto');
-
         var is_animate = false;
 
         var slideWidth = jQuery('.slide-item').outerWidth();
@@ -39,35 +37,26 @@ jQuery(document).ready(function () {
 
             }
         });
-
-
-        function autoplay() {
-            if (!is_animate) {
-                is_animate = true;
-                slideWrap.animate({ left: newLeftPos }, 500, function () {
-                    slideWrap
-						.find('.slide-item:first')
-						.appendTo(slideWrap)
-						.parent()
-						.css({ 'left': 0 });
-                    is_animate = false;
-                });
-            }
-        }
-
-        playLink.click(function () {
-            if (playLink.hasClass('play')) {
-                playLink.removeClass('play').addClass('pause');
-                jQuery('.navy').addClass('disable');
-                timer = setInterval(autoplay, 1000);
-            } else {
-                playLink.removeClass('pause').addClass('play');
-                jQuery('.navy').removeClass('disable');
-                clearInterval(timer);
-            }
-        });
-
     }
 
     htmSlider();
+
+    //$(".slide-item img").hover(function () {
+    //    $(this).parent().parent().css("z-index", 3);
+    //    $(this).animate({
+    //        height: "300",
+    //        width: "300",
+    //        left: "-=50",
+    //        top: "-=50"
+    //    }, "fast");
+
+    //}, function () {
+    //    $(this).parent().parent().css("z-index", 0);
+    //    $(this).animate({
+    //        height: "200",
+    //        width: "200",
+    //        left: "+=50",
+    //        top: "+=50"
+    //    }, "fast");
+    //});
 });

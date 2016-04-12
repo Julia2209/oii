@@ -404,6 +404,9 @@ input, textarea{
     color: #14242f;
     text-decoration: underline;
 }
+.how-it-whas{
+    margin-bottom: 50px;
+}
 
                             /*PICTURES SHOP*/
 .table-pictures-shop{
@@ -453,4 +456,11 @@ table img{
 }
 .current-item{
     background-color: #818f7e;
+}
+
+.inspiration-block-gallery-photos p{
+    font-size: 14px;
+}
+.inspiration-block-gallery-photos span{
+    font-size: 18px;
 }

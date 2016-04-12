@@ -26,17 +26,19 @@ header {
 }
 .slide-wrap {
 	position: relative;
-	left: 0px;
+	left: 0;
 	top: 0;
 	width: 10000000px;
 }
 .slide-item {
 	position: relative;
+    width: 200px;
 	max-width: 200px;
 	margin: 10px;
 	float: left;
 }
 .slide-item img{
+    z-index: 0;
 	position: relative;
 	width: 100%;
 } 
@@ -55,23 +57,26 @@ header {
 .navy {
 	position: absolute;
 	top: 0;
-	z-index: 1;
-	height: 220px;
+	z-index: 0;
+	height: 320px;
 	width: 62px;
 	cursor: pointer;
 	background-color: #fdf5f2;
 }
 .prev-slide {
+    z-index: 4;
 	left: 0;
 }
 .next-slide {
+    z-index: 4;
 	right: 0;
 }
 .prev-slide img, .next-slide img{
-
+    z-index: 4;
 	margin-top: 100px;
 }
 .navy.disable {
+    
 	background: #dbdbdb;
 }
 .slide-item img:hover{

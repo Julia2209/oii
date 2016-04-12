@@ -3,6 +3,7 @@ function hiddenBlock() {
     var block = document.getElementById('hidden_block').style.display;
     document.getElementById('hidden_block').style.display = (block == 'block') ? 'none' : 'block';
 }
+//<li  class="current"><a href="about-us.php" id="hover-block" title="about us" onmouseover=hiddenBlock() onmouseout=hiddenBlock()>О нас</a></li>
 
 function digitalWatch() {
     var date = new Date();
@@ -24,18 +25,29 @@ function diplay_hide(blockId) {
     else {
         $(blockId).animate({ height: 'hide' }, 500);
     }
-
 }
-//function animate_block(blockId) {
-//    $(blockId).hover(
-//     function () {
-//         $(this).parent().find('.hidden_block').fadeIn()
+//$(function () {
+//    $('#hover-block').hover(function () {
+//        $('#hidden_block').fadeIn("slow");
+//    }, function () {
+//        $('#hidden_block').fadeOut();
+//    });
+//});
+$(function () {
+    $('#hover-block').hover(function () {
+        $('#hidden_block').fadeIn("slow");
+    }, function () {
+        $('#hidden_block').fadeOut();
+    });
+});
 
-//     },
-//     function () {
-//         $(this).parent().find('.hidden_block').fadeOut()
-//     });
-//};
+$(function () {
+    $('.slide-wrap').click(function () { });
+});
+
+//SLIDER//
+
+
 
 
 

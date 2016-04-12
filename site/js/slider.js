@@ -1,15 +1,15 @@
 jQuery(document).ready(function(){
 	function htmSlider(){
 
-		var slideWrap = jQuery('.slide-wrap');
-		var nextLink = jQuery('.next-slide');
-		var prevLink = jQuery('.prev-slide');
+		var slideWrap = $('.slide-wrap');
+		var nextLink = $('.next-slide');
+		var prevLink = $('.prev-slide');
 
-		var playLink = jQuery('.auto');
+		var playLink = $('.auto');
 		
 		var is_animate = false;
 		
-		var slideWidth = jQuery('.slide-item').outerWidth();
+		var slideWidth = $('.slide-item').outerWidth();
 		
 		var newLeftPos = slideWrap.position().left - slideWidth;
 		
