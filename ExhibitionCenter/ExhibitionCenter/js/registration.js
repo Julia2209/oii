@@ -1,71 +1,102 @@
-function validateEmail(){
 
-	var x = document.getElementById('e-mail').value;
-	var atpos=x.indexOf("@");
-	var dotpos=x.lastIndexOf(".");
-
-	if(atpos<1 || dotpos < atpos+2 || dotpos+2>=x.length){
-
-		document.getElementById('lable-e-mail').innerHTML = '(некоректный)';
-		return false;
-	} else {
-		document.getElementById('lable-e-mail').innerHTML = '';
-		return true;
-	}
+window.onload = function () {
+    document.getElementById('signform').addEventListener('submit', function () {
+        var errors = [];
+        var password = document.getElementById('pass').value;
+        var confirmPassword = document.getElementById('password').value;
+        var email = document.getElementById('e-mail').value;
+        if (!/^([\w\.-]+)@([\w\.-]+)\.([a-z\.]{2,6})$/im.test(email))
+            errors.push('Почтовый ящик не отвечает стандартной записи!');
+        if (!/^(?=.*\d)(?=.*[a-z])(?=.*[A-Z])(?!.*\s).*$/.test(password))
+            errors.push('Пароль должен содержать как минимум один символ верхнего регистра и как минимум одну цифру!');
+        if (password.length < 4 || password.length > 8)
+            errors.push('Пароль должен быть длинной 4-8 символов!');
+        if (password !== confirmPassword)
+            errors.push('Пароли не совпадают!');
+        //if (!/^[A-ZА-Я][a-zа-я]{2,}$/.test(name))
+        //    errors.push('Name has to start from uppercase, contain only alphabetical characters and be at least 2 characters long!');
+        var newWin = window.open('', '');
+        if (errors.length !== 0) {
+            newWin.document.write('<h2 style="color: red">Список ошибок валидации:</h2>');
+            errors.forEach(function (element) {
+                newWin.document.write(element + '<br/>');
+            }, this);
+        } else {
+            newWin.document.write('<h2 style="color: green">Succeded!</h2>');
+        }
+    });
 }
+//function validateEmail(){
 
-function validateName(){
+//	var x = document.getElementById('e-mail').value;
+//	var atpos=x.indexOf("@");
+//	var dotpos=x.lastIndexOf(".");
 
-	var x=document.getElementById('name').value;
+//	if(atpos<1 || dotpos < atpos+2 || dotpos+2>=x.length){
 
-	if (x.length < 3) {
+//		document.getElementById('lable-e-mail').innerHTML = '(некоректный)';
+//		return false;
+//	} else {
+//		document.getElementById('lable-e-mail').innerHTML = '';
+//		return true;
+//	}
+//}
 
-		document.getElementById('lable-name').innerHTML = '(мин. 2 символа)';
-		return false;
+//function validateName(){
 
-	} else {
+//	var x=document.getElementById('name').value;
 
-		document.getElementById('lable-name').innerHTML = '';
-		return true;
-	}
-}
+//	if (x.length < 3) {
 
-function validateSurname(){
+//		document.getElementById('lable-name').innerHTML = '(мин. 2 символа)';
+//		return false;
 
-	var x=document.getElementById('surname').value;
+//	} else {
 
-	if (x.length < 3) {
+//		document.getElementById('lable-name').innerHTML = '';
+//		return true;
+//	}
+//}
 
-		document.getElementById('lable-surname').innerHTML = '(мин. 2 символа)';
-		return false;
+//function validateSurname(){
 
-	} else {
+//	var x=document.getElementById('surname').value;
 
-		document.getElementById('lable-surname').innerHTML = '';
-		return true;
-	}
-}
-function validatePass(){
+//	if (x.length < 3) {
 
-	var x1 = document.getElementById('pass').value;
-	var x2 = document.getElementById('password').value;
+//		document.getElementById('lable-surname').innerHTML = '(мин. 2 символа)';
+//		return false;
 
-	if (x1 != x2){
+//	} else {
 
-		document.getElementById('pass').innerHTML = '(пароли не совпадают)';
-		document.getElementById('password').innerHTML = '(пароли не совпадают)';
-		return false;
+//		document.getElementById('lable-surname').innerHTML = '';
+//		return true;
+//	}
+//}
+//function validatePass(){
 
-	} else {
+//	var x1 = document.getElementById('pass').value;
+//	var x2 = document.getElementById('password').value;
 
-		document.getElementById('pass').innerHTML = '';
-		document.getElementById('password').innerHTML = '';
+//	if (!/^(?=.*\d)(?=.*[A-Z])(?=.*[a-z]){4,8}$/.test(pass)) {
+//	    document.getElementById('lable-pass').innerHTML = '(пароль должен содержать хотябі один символ верхнего регистра)';
+//	//}
+//	//if (x1 != x2){
 
-		return true;
+//	//	document.getElementById('pass').innerHTML += '(пароли не совпадают)';
+//	//	document.getElementById('password').innerHTML = '(пароли не совпадают)';
+//	//	return false;
 
-	}
+//	} else {
 
-}
+//		document.getElementById('pass').innerHTML = '';
+//		document.getElementById('password').innerHTML = '';
+
+//		return true;
+
+//	}
+
+//}
 function checkall(){
 
 	if(validateEmail() && validateName()) return true;
