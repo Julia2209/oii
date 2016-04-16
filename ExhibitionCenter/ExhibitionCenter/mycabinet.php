@@ -2,7 +2,7 @@
     if (!isset($_COOKIE['isLogged'])) {
         header('Location: ' . '/login.php');
     }
-    $pagetitle = "Pictures";
-    $content = "template.pictures.php";
+    $pagetitle = "Cabinet";
+    $content = "template.mycabinet.php";
     include "template.php";
 ?>

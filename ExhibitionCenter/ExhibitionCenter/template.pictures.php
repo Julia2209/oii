@@ -56,41 +56,30 @@
                 <tr>
                     <td>Название картины</td>
                     <td>Цена</td>
+                    <td>Количество</td>
                     <td>Заказать</td>
                     <td></td>
                 </tr>
             </thead>
             <tbody>
-                <tr id="price-item0" class="price-item current-item" index="0">
-                    <td>Картина 1 <img src="img/photo4.png"></td>
-                    <td>30.59</td>
-                    <td><input id="IsSel0" type="checkbox"/></td>
-                    <td>
-                        <div id="extra-info1">
-	                        Бла бла бла бла Бла бла бла бла Бла бла бла бла Бла бла бла бла Бла бла бла бла Бла бла бла бла Бла бла бла бла
-                        </div>
-                    </td>
-                </tr>
-                <tr id="price-item1" class="price-item" index="1">
-                    <td>Картина 2 <img src="img/preview1.png"></td>
-                    <td>39.79</td>
-                    <td><input id="IsSel1" type="checkbox"/></td>
-                    <td>
-                        <div id="extra-info2">
-	                        Бла бла бла бла Бла бла бла бла Бла бла бла бла Бла бла бла бла Бла бла бла бла Бла бла бла бла Бла бла бла бла
-                        </div>
-                    </td>
-                </tr>
-                <tr id="price-item2" class="price-item" index="2">
-                    <td>Картина 3 <img src="img/photo3.png"></td>
-                    <td>70.49</td>
-                    <td><input id="IsSel2" type="checkbox"/></td>
-                    <td>
-                        <div id="extra-info3">
-	                        Бла бла бла бла Бла бла бла бла Бла бла бла бла Бла бла бла бла Бла бла бла бла Бла бла бла бла Бла бла бла бла
-                        </div>
-                    </td>
-                </tr>
+                <?php
+                require_once('database/ProductController.php');
+                $ProductList = ProductController::GetAllProducts();
+                $isFirst = true;
+                while($row = mysql_fetch_array($ProductList)){
+                    echo '<tr class="price-item" index='.$row["Id"].' id='.$row["Id"].'>
+                            <td>'.$row["Name"].'<img class="img-item" src="img/photo'.$row["Id"].'.png"></td>
+                            <td>'.$row["Price"].'</td>
+                            <td>'.$row["Amount"].'</td>
+                            <td><input id="IsSel'.$row["Id"].'" type="checkbox"/></td>
+                            <td>
+                                <div id="extra-info'.$row["Id"].'">
+	                                '.$row["Description"].'
+                                </div>
+                            </td>
+                        </tr>';
+                }
+                ?>
             </tbody>
         </table>
 
@@ -98,5 +87,24 @@
         <button id="btn-down" class="btn btn-default">Вниз</button>
         <button id="btn-select" class="btn btn-default">Выбрать</button>
         <button id="btn-send" class="btn btn-default">В корзину</button>
+</div>
 
+<div class="overlay" hidden>
+    <div class="modal">
+        <table>
+            <tr>
+                <td>Название</td><td id="name"></td>
+            </tr>
+            <tr>
+                <td>Цена</td><td id="price"></td>
+            </tr>
+            <tr>
+                <td>Остаток на складе</td><td id="amount"></td>
+            </tr>
+            <tr>
+                <td>Описание</td><td id="desc"></td>
+            </tr>
+        </table>
+        <button id="btn-ok">OK</button>
+    </div>
 </div>

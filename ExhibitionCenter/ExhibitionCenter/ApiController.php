@@ -1,7 +1,12 @@
 <?php
 require_once('database/AccountController.php'); 
+require_once('database/ProductController.php'); 
 
 $functionName = filter_input(INPUT_GET, 'functionName');
+
+if($functionName == null) {
+    $functionName = filter_input(INPUT_POST, 'functionName');
+}
 
 if ($functionName == "login") {
 
@@ -23,5 +28,22 @@ if($functionName == "register"){
 
     echo AccountController::Register($email, $password, $username);
 }
+
+ if($functionName == "newOrder"){
+     $productList   = $_POST["productList"];
+     $productList   = json_decode("$productList", true);
+
+    $order = ProductController::AddNewOrder($productList);
+
+    return $order;
+}
+
+ if($functionName == "productInfo"){
+     $id = filter_input(INPUT_GET, 'id');
+     $result = ProductController::GetProductInfo($id);
+
+     $row = mysql_fetch_array($result);
+     echo json_encode($row);
+ }
 
 ?>

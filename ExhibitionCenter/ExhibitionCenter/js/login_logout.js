@@ -12,6 +12,7 @@
                 if (data !== 'false') {
                     $.cookie("isLogged", "true", { expires: 1, path: '/' });
                     $.cookie("userName", data, { expires: 1, path: '/' });
+                    $.cookie("userEmail", _email, { expires: 1, path: '/' });
                     location.href = 'about-us.php';
                 } else {
                     $('.errorArea').show();

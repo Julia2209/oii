@@ -29,7 +29,9 @@
   <ItemGroup>
     <Compile Include="ApiController.php" />
     <Compile Include="contacts.php" />
+    <Compile Include="database\ProductController.php" />
     <Compile Include="event1.php" />
+    <Compile Include="mycabinet.php" />
     <Compile Include="pictures.php" />
     <Compile Include="registration.php" />
     <Compile Include="shop.php" />
@@ -44,6 +46,7 @@
     <Compile Include="template.about-us.php" />
     <Compile Include="template.login.php" />
     <Compile Include="template.php" />
+    <Compile Include="template.mycabinet.php" />
     <Compile Include="template.pictures.php" />
     <Compile Include="template.registration.php" />
     <Compile Include="template.shop.php" />
@@ -187,7 +190,7 @@
     <Content Include="img\photo4.png" />
     <Content Include="img\photo_news.png" />
     <Content Include="img\photo_news2.png" />
-    <Content Include="img\preview1.png" />
+    <Content Include="img\photo1.png" />
     <Content Include="img\search.png" />
     <Content Include="img\search1.png" />
     <Content Include="img\sector1.jpg" />

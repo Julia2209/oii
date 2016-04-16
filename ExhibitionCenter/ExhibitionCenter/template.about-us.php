@@ -1,3 +1,4 @@
+<script type="text/javascript" src="js/slider.js"></script>
 <div class="about-us">
     <div class="news-block-left">
         <h3>Немного истории...</h3>                  

@@ -14,7 +14,7 @@
     <script type="text/javascript" src="js/jquery-1.12.1.min.js"></script>
 
     <script type="text/javascript" src="js/script.js"></script>
-   <!-- <script type="text/javascript" src="js/slider.js"></script>-->
+    <!--<script type="text/javascript" src="js/slider.js"></script>-->
     <script type="text/javascript" src="js/jquery.cookie.js"></script>
     <script type="text/javascript" src="js/login_logout.js"></script>
     <script type="text/javascript" src="js/registration.js"></script>

@@ -21,7 +21,9 @@
 //    });
 //})
 
-$(document).ready(function(){
+$(document).ready(function () {
+    $('table tbody').children('tr:first').addClass('current-item');
+
     $('#about').on('mouseover',function(){
         $('#about-pop-up').show('slow'); 
     }).on('mouseout',function(){
@@ -34,8 +36,27 @@ $(document).ready(function(){
 });
 
 function setPriceEvents(){
-    $('.price-item').on('click',function(){
-        selectItem(this);
+    $('.img-item').on('click', function () {
+        //selectItem(this);
+        var id = this.parentElement.parentElement.id;
+        $.ajax({
+            type: "GET",
+            url: 'ApiController.php',
+            data: { functionName: 'productInfo', id: id },
+            success: function (data) {
+                data = $.parseJSON(data);
+                $('#name').text(data["Name"]);
+                $('#amount').text(data["Amount"]);
+                $('#price').text(data["Price"]);
+                $('#desc').text(data["Description"]);
+
+                $('.overlay').show();
+            }
+        });
+        
+    });
+    $('#btn-ok').click(function () {
+        $('.overlay').hide();
     });
     $('#btn-down').on('click',function(){
         navigateThroughPrice('down'); 
@@ -48,17 +69,27 @@ function setPriceEvents(){
     });
     $('#btn-send').on('click', function(){
         var pictures = [];
+        var picturesId = [];
         $('.price-item').each(function(key,element){
-            if($(element).find('input').prop('checked') === true)
+            if ($(element).find('input').prop('checked') === true) {
                 pictures.push(element.children[0].innerText);
+                picturesId.push(element.id);
+            }
         });
         if(pictures.length > 0)
         {
+            $.ajax({
+                type: "POST",
+                url: 'ApiController.php',
+                data: { functionName: 'newOrder', productList: JSON.stringify(picturesId) },                
+            });
+
             var newWin = window.open('','');
             newWin.document.write('<h2>Selected pictures<h2/>')
             pictures.forEach(function(element) {
                 newWin.document.write(element+'<br/>');
             }, this);
+
         }
     });
 };

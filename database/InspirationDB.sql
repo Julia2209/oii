@@ -3,7 +3,7 @@
 -- http://www.phpmyadmin.net
 --
 -- Хост: 127.0.0.1:3306
--- Время создания: Апр 04 2016 г., 22:38
+-- Время создания: Апр 16 2016 г., 19:20
 -- Версия сервера: 5.6.26-log
 -- Версия PHP: 5.6.12
 
@@ -19,6 +19,71 @@ SET time_zone = "+00:00";
 --
 -- База данных: `InspirationDB`
 --
+
+-- --------------------------------------------------------
+
+--
+-- Структура таблицы `Orders`
+--
+
+CREATE TABLE `Orders` (
+  `Id` int(11) NOT NULL,
+  `Date` datetime NOT NULL,
+  `UserId` int(6) NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8;
+
+--
+-- Дамп данных таблицы `Orders`
+--
+
+INSERT INTO `Orders` (`Id`, `Date`, `UserId`) VALUES
+(20, '2016-04-16 20:17:41', 1),
+(21, '2016-04-16 20:19:25', 1);
+
+-- --------------------------------------------------------
+
+--
+-- Структура таблицы `Products`
+--
+
+CREATE TABLE `Products` (
+  `Id` int(11) NOT NULL,
+  `Name` varchar(255) NOT NULL,
+  `Price` decimal(5,2) NOT NULL,
+  `Amount` int(11) NOT NULL,
+  `Description` varchar(1024) NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8;
+
+--
+-- Дамп данных таблицы `Products`
+--
+
+INSERT INTO `Products` (`Id`, `Name`, `Price`, `Amount`, `Description`) VALUES
+(1, 'Картина 1', '30.59', 5, 'Очень-очень красивая картина!'),
+(2, 'Картина 2', '999.99', 2, 'Очень-очень дорогая картина!'),
+(3, 'Картина 3', '70.59', 12, 'Очень-очень популярная картина!');
+
+-- --------------------------------------------------------
+
+--
+-- Структура таблицы `ProductsInOrder`
+--
+
+CREATE TABLE `ProductsInOrder` (
+  `Id` int(11) NOT NULL,
+  `OrderId` int(11) NOT NULL,
+  `ProductId` int(11) NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8;
+
+--
+-- Дамп данных таблицы `ProductsInOrder`
+--
+
+INSERT INTO `ProductsInOrder` (`Id`, `OrderId`, `ProductId`) VALUES
+(10, 20, 1),
+(11, 20, 2),
+(12, 20, 3),
+(13, 21, 1);
 
 -- --------------------------------------------------------
 
@@ -50,6 +115,24 @@ INSERT INTO `Users` (`Id`, `Email`, `Password`, `UserName`) VALUES
 --
 
 --
+-- Индексы таблицы `Orders`
+--
+ALTER TABLE `Orders`
+  ADD PRIMARY KEY (`Id`);
+
+--
+-- Индексы таблицы `Products`
+--
+ALTER TABLE `Products`
+  ADD PRIMARY KEY (`Id`);
+
+--
+-- Индексы таблицы `ProductsInOrder`
+--
+ALTER TABLE `ProductsInOrder`
+  ADD PRIMARY KEY (`Id`);
+
+--
 -- Индексы таблицы `Users`
 --
 ALTER TABLE `Users`
@@ -59,6 +142,21 @@ ALTER TABLE `Users`
 -- AUTO_INCREMENT для сохранённых таблиц
 --
 
+--
+-- AUTO_INCREMENT для таблицы `Orders`
+--
+ALTER TABLE `Orders`
+  MODIFY `Id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=22;
+--
+-- AUTO_INCREMENT для таблицы `Products`
+--
+ALTER TABLE `Products`
+  MODIFY `Id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=4;
+--
+-- AUTO_INCREMENT для таблицы `ProductsInOrder`
+--
+ALTER TABLE `ProductsInOrder`
+  MODIFY `Id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=14;
 --
 -- AUTO_INCREMENT для таблицы `Users`
 --
